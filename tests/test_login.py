@@ -42,11 +42,18 @@ def test_login():
     
     #Log in button
 
-    login_page.login(username="testacc1", password="Pass1234#", sign_in_button="#sign_in_btn")
+    login_page.login(username="testacc1", password="Pass1234#")
 
     # Sleep after credentials are entered and click on the sign in button
-    time.sleep(15)
+    time.sleep(5)
+
+    locator = login_page.get_locator("#sign_in_btn")
+    locator.wait_for(state="visible")
+    
+    locator.click()
+
+    time.sleep(3)
 
     # close the browser after the test finish
 
-    login_page.close_browser()
+    setup_initializer.close_browser()
