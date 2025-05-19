@@ -28,4 +28,4 @@ jobs:
         run: python -m playwright install --with-deps
 
       - name: Run Playwright Tests
-        run: pytest test_login.py
+        run: pytest tests/test_login.py
