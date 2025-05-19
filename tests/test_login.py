@@ -17,7 +17,7 @@ from utils.browser_manager import BrowserManager
 
 def test_login():
     # Execute the init inside BrowserManager class which starts playwright and a browser
-    setup_initializer = BrowserManager(headless=False)
+    setup_initializer = BrowserManager(headless=True)
     print("Playwright started, browser launched")
 
     # Create a new page(this is just a simple page)
