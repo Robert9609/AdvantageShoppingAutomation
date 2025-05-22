@@ -13,7 +13,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Build Trigger Message Updated
+      - name: Build Trigger Message Update
         run: echo "🚀 Build triggered successfully"
 
       - name: Set up Python
